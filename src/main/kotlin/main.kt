@@ -3,16 +3,13 @@ fun main(args: Array<String>) {
     var n: Long = readLine()!!.toLong()
     calculateFibonacciSequence(n)
 
-    for (i in calculateFibonacciSequence((n))){
+    for (i in calculateFibonacciSequence(n)){
         println("$i, ")
     }
 }
 
 fun calculateFibonacciSequence(n : Long) : Array<Long>{
-    /*
-    fib(n) = fib(n-1) + fib(n-2)
-     */
-
+    
     val list = mutableListOf<Long>()
     var firstNumber: Long = 0;
     var secondNumber: Long = 1;
@@ -35,13 +32,5 @@ fun calculateFibonacciSequence(n : Long) : Array<Long>{
         secondNumber = result
         list.add(result)
     }
-
     return list.toTypedArray()
-
-
-
-
-
-
-
 }
